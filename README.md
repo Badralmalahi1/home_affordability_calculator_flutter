@@ -19,10 +19,31 @@ classDiagram
         +double get conservativePrice
         +double get flexiblePrice
     }
+    class HistoryManager {
+        +List<HomeAffordabilityProfile> history
+        +void addHistory(HomeAffordabilityProfile profile)
+        +List<HomeAffordabilityProfile> getHistory()
+        +void clearHistory()
+    }
+    class HistoryPage {
+        +Widget build(BuildContext context)
+        +void displayHistory()
+        +void clearHistory()
+    }
+    class ExploreFiltersPage {
+        +double maxPrice
+        +int bedrooms
+        +int bathrooms
+        +String zipCode
+        +Widget build(BuildContext context)
+        +void applyFilters()
+    }
 
-    HomeAffordabilityProfile : +calculatePriceFromDTI(dtiRatio)
-    HomeAffordabilityProfile : +conservativePrice
-    HomeAffordabilityProfile : +flexiblePrice
+    HomeAffordabilityProfile --> HistoryManager : "saves to"
+    HistoryManager --> HistoryPage : "displays history in"
+    HomeAffordabilityProfile --> ExploreFiltersPage : "provides data for"
+    ExploreFiltersPage --> HistoryManager : "uses history from"
+
 
 ```
 
