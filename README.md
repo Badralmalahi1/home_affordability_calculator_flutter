@@ -1,16 +1,25 @@
-# home_afford_flutter
+# Home Affordability Calculator
 
-A new Flutter project.
+## Project Overview
+This Flutter app helps users estimate the home price they can afford based on their monthly income, debt, and down payment. It also allows users to search for homes on Zillow using the calculated price and their ZIP code.
 
-## Getting Started
+## Features
+- **Home Affordability Estimator**: Calculates home price based on DTI ratio.
+- **Zillow Integration**: Explore homes on Zillow based on affordability.
+- **History**: View and manage previous calculations.
 
-This project is a starting point for a Flutter application.
+## UML Class Diagram
+```mermaid
+classDiagram
+    class HomeAffordabilityProfile {
+        +double income
+        +double debt
+        +double downPayment
+        +double _calculatePriceFromDTI(dtiRatio)
+        +double get conservativePrice
+        +double get flexiblePrice
+    }
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    HomeAffordabilityProfile : +calculatePriceFromDTI(dtiRatio)
+    HomeAffordabilityProfile : +conservativePrice
+    HomeAffordabilityProfile : +flexiblePrice
