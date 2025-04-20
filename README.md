@@ -48,9 +48,9 @@ classDiagram
 ```
 
 ## How to Run the Application (2-3 paragraphs)
-- **Prerequisites:
-- **Flutter: Ensure you have Flutter installed. You can download it from Flutter’s official website.
-- **Android Studio or Xcode: Install Android Studio for Android devices or Xcode for iOS devices.
+Prerequisites:
+Flutter: Ensure you have Flutter installed. You can download it from Flutter’s official website.
+Android Studio or Xcode: Install Android Studio for Android devices or Xcode for iOS devices.
 
 STEP 1: 
 Clone this repository:
@@ -66,13 +66,13 @@ flutter run
 
 ## Features
 
-- **Home Affordability Estimator: Takes user input (income, debt, down payment) to calculate the maximum home price they can afford.
+Home Affordability Estimator: Takes user input (income, debt, down payment) to calculate the maximum home price they can afford.
 
-- **Zillow Integration: Redirects users to Zillow’s website with filters for their estimated price, bedrooms, bathrooms, and ZIP code.
+Zillow Integration: Redirects users to Zillow’s website with filters for their estimated price, bedrooms, bathrooms, and ZIP code.
 
-- **History Tracking: Saves previous affordability calculations and allows users to view their history.
+History Tracking: Saves previous affordability calculations and allows users to view their history.
 
-- **Professional UI: A clean, modern design with maroon-colored buttons, a background image, and professional animations.
+Professional UI: A clean, modern design with maroon-colored buttons, a background image, and professional animations.
 
 ## Testing the App (1 paragraph)
 To test the app, simply run it on a connected device or simulator/emulator. The app will display a home affordability calculator, allowing users to enter their data and see the estimated price they can - afford. The history page will show past calculations, and the user can explore listings on Zillow based on their calculated affordability. Testing should ensure that all user inputs are handled properly, the calculations are accurate, and the Zillow integration works as expected.
